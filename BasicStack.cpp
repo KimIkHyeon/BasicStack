@@ -9,19 +9,20 @@ int a[MAXN + 10];
 int stk[MAXN + 10];
 int sp;
 void push(int d){
-
+	stk[sp] = d;
+	sp++;
 }
 void pop() {
-
+	sp--;
 }
 int top() {
-
+	return stk[sp-1];
 }
 bool empty() {
-
+	return sp==0?1:0;
 }
 int size() {
-
+	return sp;
 }
 void Solve(){
 	sp = 0;//√ ±‚»≠
